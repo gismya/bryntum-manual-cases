@@ -5,7 +5,7 @@ import dayjs from "dayjs";
 import {
   getTaskData,
   getProjectData,
-  getCalendarData,
+  getCalendarData
 } from "./DataProcessing.js";
 import { useInfiniteQuery } from "react-query";
 function getNextPageParam(lastPage) {
@@ -14,12 +14,16 @@ function getNextPageParam(lastPage) {
 function flattenPages(data) {
   return {
     pageParams: [],
-    pages: data.pages.flat().flatMap((page) => page.data),
+    pages: data.pages.flat().flatMap(page => page.data)
   };
 }
 
-const initialStartDate = dayjs().subtract(1, "week").toDate();
-const initialEndDate = dayjs().add(2, "week").toDate();
+const initialStartDate = dayjs("2023-04-05T22:00:00")
+  .subtract(1, "week")
+  .toDate();
+const initialEndDate = dayjs("2023-04-05T22:00:00")
+  .add(1, "week")
+  .toDate();
 const schedulerProConfig = {
   startDate: initialStartDate,
   endDate: initialEndDate,
@@ -34,12 +38,12 @@ const schedulerProConfig = {
       width: 150,
       htmlEncode: false,
       enableHeaderContextMenu: false,
-      showImage: true,
-    },
+      showImage: true
+    }
   ],
   project: {
-    calendar: "calendar",
-  },
+    calendar: "calendar"
+  }
 };
 export function Scheduler() {
   const schedulerProRef = useRef(null);
@@ -55,7 +59,7 @@ export function Scheduler() {
       keepPreviousData: true,
       getNextPageParam,
       select: flattenPages,
-      staleTime: 0,
+      staleTime: 0
     }
   );
   const projects = useInfiniteQuery(
@@ -70,7 +74,7 @@ export function Scheduler() {
       keepPreviousData: true,
       getNextPageParam,
       select: flattenPages,
-      staleTime: 0,
+      staleTime: 0
     }
   );
   const calendarEvents = useInfiniteQuery(
@@ -85,7 +89,7 @@ export function Scheduler() {
       keepPreviousData: true,
       getNextPageParam,
       select: flattenPages,
-      staleTime: 0,
+      staleTime: 0
     }
   );
 
@@ -97,15 +101,14 @@ export function Scheduler() {
   const [taskEventData, taskAssignmentData] = useMemo(
     () =>
       getTaskData(tasks.data?.pages, {
-        hideBlockedTasks: false,
+        hideBlockedTasks: false
       }),
     [tasks.data?.pages]
   );
 
-  const resourcesData = useMemo(
-    () => getProjectData(projects.data?.pages),
-    [projects.data?.pages]
-  );
+  const resourcesData = useMemo(() => getProjectData(projects.data?.pages), [
+    projects.data?.pages
+  ]);
 
   const calendarsData = useMemo(
     () => [
@@ -116,22 +119,22 @@ export function Scheduler() {
           {
             recurrentStartDate: "on Sun at 0:00",
             recurrentEndDate: "on Mon at 0:00",
-            isWorking: false,
+            isWorking: false
           },
           {
             recurrentStartDate: "on Sat at 0:00",
             recurrentEndDate: "on Sun at 0:00",
-            isWorking: false,
-          },
-        ],
-      },
+            isWorking: false
+          }
+        ]
+      }
     ],
     []
   );
-  const eventsData = useMemo(
-    () => [...calendarEventsData, ...taskEventData],
-    [calendarEventsData, taskEventData]
-  );
+  const eventsData = useMemo(() => [...calendarEventsData, ...taskEventData], [
+    calendarEventsData,
+    taskEventData
+  ]);
 
   const assignmentsData = useMemo(
     () => [...taskAssignmentData, ...calendarEventAssignmentData],
@@ -148,7 +151,7 @@ export function Scheduler() {
       resources: resourcesData,
       events: isLoading ? [] : eventsData,
       assignments: isLoading ? [] : assignmentsData,
-      calendars: isLoading ? [] : calendarsData,
+      calendars: isLoading ? [] : calendarsData
     }),
     [isLoading, eventsData, assignmentsData, resourcesData, calendarsData]
   );
