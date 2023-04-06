@@ -1,4 +1,6 @@
-# Getting it running
+Test repo for a Bryntum support case.
+
+To get it running:
 
 ### `npm install`
 
