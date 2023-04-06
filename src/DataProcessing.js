@@ -45,17 +45,10 @@ export function getTaskData(tasks = [], options = { hideBlockedTasks: true }) {
       ),
       manuallyScheduled: true,
       segments: task.split_parts?.length
-        ? task.split_parts?.map((splitTaskPart, i) => {
+        ? task.split_parts?.map((splitTaskPart) => {
             return {
               id: splitTaskPart.id,
-              startDate:
-                i !== 0 &&
-                splitTaskPart.start_date?.value ===
-                  task.split_parts?.[i - 1].end_date?.value
-                  ? dayjs(splitTaskPart.start_date?.value)
-                      .add(0.01, "second")
-                      .toISOString()
-                  : splitTaskPart.start_date?.value,
+              startDate: splitTaskPart.start_date?.value,
               endDate: splitTaskPart.end_date?.value,
               name: splitTaskPart.label || task.name,
               link: task.link,
