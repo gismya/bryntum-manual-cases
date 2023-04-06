@@ -21,24 +21,12 @@ function flattenPages(data) {
 const initialStartDate = dayjs().subtract(1, "week").toDate();
 const initialEndDate = dayjs().add(2, "week").toDate();
 const schedulerProConfig = {
-  scrollable: true,
   startDate: initialStartDate,
   endDate: initialEndDate,
-  //infiniteScroll: true, /*Bryntum bug when infiniteScroll is enabled and viewPreset value changes. */
   rowHeight: 36,
   barMargin: 2,
-  milestoneLayoutMode: "estimate",
-  milestoneCharWidth: 10,
-  milestoneAlign: "center",
-  milestoneTextPosition: "always-outside",
   readOnly: true,
-  zoomOnTimeAxisDoubleClick: false,
-  zoomOnMouseWheel: false,
   columns: [
-    {
-      type: "timeAxis",
-      enableHeaderContextMenu: false,
-    },
     {
       type: "resourceInfo",
       field: "name",
@@ -49,20 +37,6 @@ const schedulerProConfig = {
       showImage: true,
     },
   ],
-  features: {
-    timeAxisHeaderMenu: {
-      disabled: true,
-    },
-    timeRanges: {
-      showHeaderElements: true,
-    },
-    taskEdit: {
-      triggerEvent: "eventclick",
-    },
-    cellTooltip: {
-      disabled: true,
-    },
-  },
   project: {
     calendar: "calendar",
   },
@@ -84,7 +58,6 @@ export function Scheduler() {
       staleTime: 0,
     }
   );
-
   const projects = useInfiniteQuery(
     ["projects"],
     async () => {
@@ -100,7 +73,6 @@ export function Scheduler() {
       staleTime: 0,
     }
   );
-
   const calendarEvents = useInfiniteQuery(
     ["calendarEvents"],
     async () => {
@@ -179,14 +151,6 @@ export function Scheduler() {
       calendars: isLoading ? [] : calendarsData,
     }),
     [isLoading, eventsData, assignmentsData, resourcesData, calendarsData]
-  );
-  console.log("data", data);
-  console.log(
-    <BryntumSchedulerPro
-      ref={schedulerProRef}
-      {...data}
-      {...schedulerProConfig}
-    />
   );
   return projects.isInitialLoading ? (
     <h1>loading</h1>

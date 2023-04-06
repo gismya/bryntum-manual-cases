@@ -1,1 +1,8 @@
 @import "~@bryntum/schedulerpro/schedulerpro.classic-dark.css";
+.b-schedulerpro {
+  width: 100%;
+  height: 100%;
+}
+#root {
+  height: 70vh;
+}
