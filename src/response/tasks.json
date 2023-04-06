@@ -1,0 +1,316 @@
+[
+  {
+    "action": "query",
+    "data": [
+      {
+        "status": {
+          "color": "#3498DB",
+          "state": {
+            "__entity_type__": "State",
+            "id": "cea0efc4-acb5-11e1-8668-f23c91df1211",
+            "short": "IN_PROGRESS"
+          },
+          "__entity_type__": "Status",
+          "id": "44ddd0fe-4164-11df-9218-0019bb4983d8",
+          "name": "In progress"
+        },
+        "ancestors": [
+          {
+            "status": null,
+            "context_type": "task",
+            "__entity_type__": "Folder",
+            "object_type_id": "3c133785-51cb-11e3-980a-20c9d0831e59",
+            "project_id": "33b1e354-8b3d-11eb-8e99-c2ffbce28b68",
+            "id": "5f1d6a04-8b4c-11eb-ae63-c2ffbce28b68"
+          },
+          {
+            "status": {
+              "state": {
+                "__entity_type__": "State",
+                "id": "cea0ba04-acb5-11e1-8668-f23c91df1211",
+                "short": "NOT_STARTED"
+              },
+              "__entity_type__": "Status",
+              "id": "44dd9fb2-4164-11df-9218-0019bb4983d8"
+            },
+            "context_type": "task",
+            "__entity_type__": "AssetBuild",
+            "object_type_id": "4be63b64-5010-42fb-bf1f-428af9d638f0",
+            "project_id": "33b1e354-8b3d-11eb-8e99-c2ffbce28b68",
+            "id": "894a0516-8b57-11eb-b5d3-c2ffbce28b68"
+          }
+        ],
+        "name": "Modeling",
+        "end_date": {
+          "__type__": "datetime",
+          "value": "2023-04-08T22:00:00"
+        },
+        "context_type": "task",
+        "bid": 75600,
+        "object_type": {
+          "__entity_type__": "ObjectType",
+          "id": "11c137c0-ee7e-4f9c-91c5-8c77cec22b2c",
+          "icon": "task",
+          "name": "Task"
+        },
+        "_link": [
+          {
+            "type": "Project",
+            "id": "33b1e354-8b3d-11eb-8e99-c2ffbce28b68",
+            "name": "Sync"
+          },
+          {
+            "type": "TypedContext",
+            "id": "5f1d6a04-8b4c-11eb-ae63-c2ffbce28b68",
+            "name": "Asset Builds"
+          },
+          {
+            "type": "TypedContext",
+            "id": "894a0516-8b57-11eb-b5d3-c2ffbce28b68",
+            "name": "Drone Craft"
+          },
+          {
+            "type": "TypedContext",
+            "id": "9853ffc6-8b57-11eb-98c4-c2ffbce28b68",
+            "name": "Modeling"
+          }
+        ],
+        "start_date": {
+          "__type__": "datetime",
+          "value": "2023-04-01T22:00:00"
+        },
+        "project": {
+          "color": "#8BC34A",
+          "context_type": "show",
+          "__entity_type__": "Project",
+          "id": "33b1e354-8b3d-11eb-8e99-c2ffbce28b68"
+        },
+        "assignments": [
+          {
+            "__entity_type__": "Appointment",
+            "resource": {
+              "username": "api_test@example.com",
+              "is_otp_enabled": false,
+              "last_name": "Test",
+              "thumbnail_id": null,
+              "is_active": true,
+              "first_name": "API",
+              "is_totp_enabled": false,
+              "require_details_update": false,
+              "email": "api_test@example.com",
+              "__entity_type__": "User",
+              "user_type_id": "ac9fa5aa-4361-11e0-b7cc-0019bb4983d8",
+              "thumbnail_url": {
+                "url": "https://localhost:8090/thumbor/eyQ_ZI8b0OY-q2FJUHQGtO5_7l8=/fit-in/300x300/http%3A//nginx%3A8090/img/thumbnail2.png",
+                "value": "https://localhost:8090/thumbor/eyQ_ZI8b0OY-q2FJUHQGtO5_7l8=/fit-in/300x300/http%3A//nginx%3A8090/img/thumbnail2.png"
+              },
+              "id": "5395490e-9965-11ec-99ab-7edb16360c1f",
+              "resource_type": "user"
+            },
+            "id": "a05adb61-0c1c-4ed0-838b-3d3d57ec7211"
+          }
+        ],
+        "__entity_type__": "Task",
+        "link": [
+          {
+            "type": "Project",
+            "id": "33b1e354-8b3d-11eb-8e99-c2ffbce28b68",
+            "name": "Sync"
+          },
+          {
+            "type": "TypedContext",
+            "id": "5f1d6a04-8b4c-11eb-ae63-c2ffbce28b68",
+            "name": "Asset Builds"
+          },
+          {
+            "type": "TypedContext",
+            "id": "894a0516-8b57-11eb-b5d3-c2ffbce28b68",
+            "name": "Drone Craft"
+          },
+          {
+            "type": "TypedContext",
+            "id": "9853ffc6-8b57-11eb-98c4-c2ffbce28b68",
+            "name": "Modeling"
+          }
+        ],
+        "object_type_id": "11c137c0-ee7e-4f9c-91c5-8c77cec22b2c",
+        "split_parts": [],
+        "project_id": "33b1e354-8b3d-11eb-8e99-c2ffbce28b68",
+        "type": {
+          "color": "#935ba2",
+          "__entity_type__": "Type",
+          "id": "44dc53c8-4164-11df-9218-0019bb4983d8",
+          "name": "Modeling"
+        },
+        "id": "9853ffc6-8b57-11eb-98c4-c2ffbce28b68"
+      },
+      {
+        "status": {
+          "color": "#3498DB",
+          "state": {
+            "__entity_type__": "State",
+            "id": "cea0efc4-acb5-11e1-8668-f23c91df1211",
+            "short": "IN_PROGRESS"
+          },
+          "__entity_type__": "Status",
+          "id": "44ddd0fe-4164-11df-9218-0019bb4983d8",
+          "name": "In progress"
+        },
+        "ancestors": [
+          {
+            "status": null,
+            "context_type": "task",
+            "__entity_type__": "Folder",
+            "object_type_id": "3c133785-51cb-11e3-980a-20c9d0831e59",
+            "project_id": "33b1e354-8b3d-11eb-8e99-c2ffbce28b68",
+            "id": "5f1d6a04-8b4c-11eb-ae63-c2ffbce28b68"
+          },
+          {
+            "status": {
+              "state": {
+                "__entity_type__": "State",
+                "id": "cea0ba04-acb5-11e1-8668-f23c91df1211",
+                "short": "NOT_STARTED"
+              },
+              "__entity_type__": "Status",
+              "id": "44dd9fb2-4164-11df-9218-0019bb4983d8"
+            },
+            "context_type": "task",
+            "__entity_type__": "AssetBuild",
+            "object_type_id": "4be63b64-5010-42fb-bf1f-428af9d638f0",
+            "project_id": "33b1e354-8b3d-11eb-8e99-c2ffbce28b68",
+            "id": "894a0516-8b57-11eb-b5d3-c2ffbce28b68"
+          }
+        ],
+        "name": "Split",
+        "end_date": {
+          "__type__": "datetime",
+          "value": "2023-04-08T22:00:00"
+        },
+        "context_type": "task",
+        "bid": 75600,
+        "object_type": {
+          "__entity_type__": "ObjectType",
+          "id": "11c137c0-ee7e-4f9c-91c5-8c77cec22b2c"
+        },
+        "_link": [
+          {
+            "type": "Project",
+            "id": "33b1e354-8b3d-11eb-8e99-c2ffbce28b68",
+            "name": "Sync"
+          },
+          {
+            "type": "TypedContext",
+            "id": "5f1d6a04-8b4c-11eb-ae63-c2ffbce28b68",
+            "name": "Asset Builds"
+          },
+          {
+            "type": "TypedContext",
+            "id": "894a0516-8b57-11eb-b5d3-c2ffbce28b68",
+            "name": "Drone Craft"
+          },
+          {
+            "type": "TypedContext",
+            "id": "9853ffc6-8b57-11eb-98c4-c2ffbce28b68",
+            "name": "Split"
+          }
+        ],
+        "start_date": {
+          "__type__": "datetime",
+          "value": "2023-04-01T22:00:00"
+        },
+        "project": {
+          "color": "#8BC34A",
+          "context_type": "show",
+          "__entity_type__": "Project",
+          "id": "33b1e354-8b3d-11eb-8e99-c2ffbce28b68"
+        },
+        "assignments": [
+          {
+            "__entity_type__": "Appointment",
+            "resource": {
+              "__entity_type__": "User",
+              "id": "5395490e-9965-11ec-99ab-7edb16360c1f"
+            },
+            "id": "a05adb61-0c1c-4ed0-838b-3d3d57ec7211"
+          }
+        ],
+        "__entity_type__": "Task",
+        "link": [
+          {
+            "type": "Project",
+            "id": "33b1e354-8b3d-11eb-8e99-c2ffbce28b68",
+            "name": "Sync"
+          },
+          {
+            "type": "TypedContext",
+            "id": "5f1d6a04-8b4c-11eb-ae63-c2ffbce28b68",
+            "name": "Asset Builds"
+          },
+          {
+            "type": "TypedContext",
+            "id": "894a0516-8b57-11eb-b5d3-c2ffbce28b68",
+            "name": "Drone Craft"
+          },
+          {
+            "type": "TypedContext",
+            "id": "9853ffc6-8b57-11eb-98c4-c2ffbce28b68",
+            "name": "Split"
+          }
+        ],
+        "object_type_id": "11c137c0-ee7e-4f9c-91c5-8c77cec22b2c",
+        "split_parts": [
+          {
+            "task": {
+              "__entity_type__": "Task",
+              "id": "9853ffc6-8b57-11eb-98c4-c2ffbce28b68"
+            },
+            "task_id": "9853ffc6-8b57-11eb-98c4-c2ffbce28b68",
+            "end_date": {
+              "__type__": "datetime",
+              "value": "2023-04-03T23:00:00"
+            },
+            "start_date": {
+              "__type__": "datetime",
+              "value": "2023-04-01T22:00:00"
+            },
+            "__entity_type__": "SplitTaskPart",
+            "label": null,
+            "id": "8cc12837-3e71-4386-a4f5-238cc5f19204"
+          },
+          {
+            "task": {
+              "__entity_type__": "Task",
+              "id": "9853ffc6-8b57-11eb-98c4-c2ffbce28b68"
+            },
+            "task_id": "9853ffc6-8b57-11eb-98c4-c2ffbce28b68",
+            "end_date": {
+              "__type__": "datetime",
+              "value": "2023-04-08T22:00:00"
+            },
+            "start_date": {
+              "__type__": "datetime",
+              "value": "2023-04-06T22:00:00"
+            },
+            "__entity_type__": "SplitTaskPart",
+            "label": null,
+            "id": "6e00b3bc-1e9a-4d6a-bf61-a784623dd853"
+          }
+        ],
+        "project_id": "33b1e354-8b3d-11eb-8e99-c2ffbce28b68",
+        "type": {
+          "color": "#935ba2",
+          "__entity_type__": "Type",
+          "id": "44dc53c8-4164-11df-9218-0019bb4983d8",
+          "name": "Modeling"
+        },
+        "id": "44dc53c8-4164-11df-9218-0019bb4983d8"
+      }
+    ],
+    "metadata": {
+      "next": {
+        "offset": null
+      }
+    }
+  }
+]

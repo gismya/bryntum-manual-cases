@@ -1,0 +1,80 @@
+[
+  {
+    "action": "query",
+    "data": [
+      {
+        "calendar_event_resources": [
+          {
+            "__entity_type__": "CalendarEventResource",
+            "resource": {
+              "__entity_type__": "User",
+              "id": "5395490e-9965-11ec-99ab-7edb16360c1f"
+            },
+            "id": "924e1609-65f1-4d24-bfc1-b19bed80034c"
+          }
+        ],
+        "end": {
+          "__type__": "datetime",
+          "value": "2023-04-08T22:00:00"
+        },
+        "name": "event",
+        "project": {
+          "color": "#8BC34A",
+          "context_type": "show",
+          "__entity_type__": "Project",
+          "id": "33b1e354-8b3d-11eb-8e99-c2ffbce28b68",
+          "full_name": "Sync"
+        },
+        "type": null,
+        "leave": false,
+        "start": {
+          "__type__": "datetime",
+          "value": "2023-04-01T22:00:00"
+        },
+        "__entity_type__": "CalendarEvent",
+        "estimate": 0,
+        "project_id": "33b1e354-8b3d-11eb-8e99-c2ffbce28b68",
+        "effort": 28800,
+        "id": "542d796b-03ea-4430-baa4-87d7b9e9c5df"
+      },
+
+      {
+        "calendar_event_resources": [
+          {
+            "__entity_type__": "CalendarEventResource",
+            "resource": {
+              "__entity_type__": "User",
+              "id": "5395490e-9965-11ec-99ab-7edb16360c1f"
+            },
+            "id": "acf28610-6e4f-472a-a387-c2c14467e89c"
+          }
+        ],
+        "end": {
+          "__type__": "datetime",
+          "value": "2023-04-08T22:00:00"
+        },
+        "name": "JapanEvent",
+        "project": {
+          "__entity_type__": "Project",
+          "id": "33b1e354-8b3d-11eb-8e99-c2ffbce28b68"
+        },
+        "type": null,
+        "leave": false,
+        "start": {
+          "__type__": "datetime",
+          "value": "2023-04-01T22:00:00"
+        },
+        "__entity_type__": "CalendarEvent",
+        "estimate": 0,
+        "project_id": "33b1e354-8b3d-11eb-8e99-c2ffbce28b68",
+        "effort": 28800,
+        "id": "f95f9bc6-a470-476c-b5dc-5f01f971b8e1"
+      }
+    ],
+    "metadata": {
+      "next": {
+        "offset": null
+      }
+    }
+  }
+]

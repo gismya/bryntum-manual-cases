@@ -1,0 +1,22 @@
+[
+  {
+    "action": "query",
+    "data": [
+      {
+        "context_type": "show",
+        "__entity_type__": "Project",
+        "thumbnail_url": {
+          "url": "https://localhost:8090/thumbor/jWfeFxPUdSHXsulMioUsOrBateg=/fit-in/300x300/http%3A//nginx%3A8090/component/get%3Fid%3D760594b8-8b50-11eb-b695-c2ffbce28b68%26signature%3DEj3ec-27J18plPObeHx-pCjD9o08EcPEwMXFQBp4LSY%253D",
+          "value": "https://localhost:8090/thumbor/jWfeFxPUdSHXsulMioUsOrBateg=/fit-in/300x300/http%3A//nginx%3A8090/component/get%3Fid%3D760594b8-8b50-11eb-b695-c2ffbce28b68%26signature%3DEj3ec-27J18plPObeHx-pCjD9o08EcPEwMXFQBp4LSY%253D"
+        },
+        "id": "33b1e354-8b3d-11eb-8e99-c2ffbce28b68",
+        "full_name": "Sync"
+      }
+    ],
+    "metadata": {
+      "next": {
+        "offset": null
+      }
+    }
+  }
+]
